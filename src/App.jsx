@@ -32,10 +32,10 @@ function App() {
 
   return (
     <div className="bg-[url('./assets/bg.jpg')] w-full min-h-[100vh] bg-cover bg-center flex justify-center items-center">
-        <div className="bg-transparent  backdrop-blur-xl w-fit p-2 rounded-lg border-gray-300 border-2">
+        <div className="bg-transparent  backdrop-blur-xl w-[430px] flex flex-col justify-center items-center p-2 rounded-lg border-gray-300 border-2">
             <Searchbar city = {city} setcity = {setCity} getWeather={getWeather}></Searchbar>
             {
-                (loading && data.length === 0) ? (<Loader></Loader>) : (<Infosection data = {data}></Infosection>)
+                (loading) ? (<Loader></Loader>) : (<Infosection data = {data}></Infosection>)
             }
         </div>
 
